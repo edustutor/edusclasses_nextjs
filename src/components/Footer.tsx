@@ -8,7 +8,7 @@ export function Footer() {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-12 lg:gap-12">
                     {/* Logo and Description */}
-                    <div className="col-span-1 md:col-span-5">
+                    <div className="col-span-1 md:col-span-5 flex flex-col items-center md:items-start">
                         <Link href="https://www.edus.lk" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block">
                             <Image
                                 src="/EDUS-Tutor-Logo1.webp"
@@ -18,7 +18,7 @@ export function Footer() {
                                 className="h-16 md:h-20 w-auto"
                             />
                         </Link>
-                        <p className="mb-6 max-w-sm text-sm text-gray-300 leading-relaxed">
+                        <p className="mb-6 max-w-sm text-sm text-gray-300 leading-relaxed text-center md:text-justify">
                             <span className="font-semibold text-white">EDUS</span> is a leading Online Live Learning Institute for students from Grade 1 to G.C.E A/L. EDUS provides quality assured online live classes to students across Sri Lanka, ensuring student&apos;s academic success.
                         </p>
                     </div>
