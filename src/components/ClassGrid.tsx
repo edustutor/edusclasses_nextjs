@@ -55,9 +55,13 @@ export function ClassGrid({ initialData }: ClassGridProps) {
             return matchesGrade && matchesSyllabus && matchesMedium && matchesType;
         });
 
-        // Sort by Grade Order, then by Class Type (Group first)
+        // Sort by Class Type (Group first), then by Grade Order
         return filtered.sort((a, b) => {
-            // 1. Sort by Grade
+            // 1. Sort by Class Type (GROUP before INDIVIDUAL)
+            if (a.classType === "GROUP" && b.classType !== "GROUP") return -1;
+            if (a.classType !== "GROUP" && b.classType === "GROUP") return 1;
+
+            // 2. Sort by Grade
             const indexA = GRADE_ORDER.indexOf(a.grade);
             const indexB = GRADE_ORDER.indexOf(b.grade);
             let gradeComparison = 0;
@@ -72,13 +76,7 @@ export function ClassGrid({ initialData }: ClassGridProps) {
                 gradeComparison = a.grade.localeCompare(b.grade);
             }
 
-            if (gradeComparison !== 0) return gradeComparison;
-
-            // 2. Sort by Class Type (GROUP before INDIVIDUAL)
-            if (a.classType === "GROUP" && b.classType !== "GROUP") return -1;
-            if (a.classType !== "GROUP" && b.classType === "GROUP") return 1;
-
-            return 0;
+            return gradeComparison;
         });
 
     }, [initialData, filters]);
