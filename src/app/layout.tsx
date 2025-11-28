@@ -10,6 +10,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "EDUS Classes",
   description: "Student Signup Portal",
+  icons: {
+    icon: "/Untitled-design1-1.png",
+    shortcut: "/Untitled-design1-1.png",
+    apple: "/Untitled-design1-1.png",
+  },
 };
 
 export default function RootLayout({

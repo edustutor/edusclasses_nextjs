@@ -7,11 +7,11 @@ export function Header() {
             <div className="container mx-auto flex h-16 items-center justify-between px-4">
                 <Link href="https://edus.lk" target="_blank" rel="noopener noreferrer">
                     <Image
-                        src="/1.png"
+                        src="/EDUS-Tutor-Logo.webp"
                         alt="EDUS Logo"
                         width={300}
                         height={80}
-                        className="h-20 w-auto"
+                        className="h-10 md:h-12 w-auto"
                     />
                 </Link>
 

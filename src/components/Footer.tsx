@@ -11,11 +11,11 @@ export function Footer() {
                     <div className="col-span-1 md:col-span-5">
                         <Link href="https://www.edus.lk" target="_blank" rel="noopener noreferrer" className="mb-4 inline-block">
                             <Image
-                                src="/2.png"
+                                src="/EDUS-Tutor-Logo1.webp"
                                 alt="EDUS Logo"
                                 width={300}
                                 height={100}
-                                className="h-24 w-auto"
+                                className="h-16 md:h-20 w-auto"
                             />
                         </Link>
                         <p className="mb-6 max-w-sm text-sm text-gray-300 leading-relaxed">
