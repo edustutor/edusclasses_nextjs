@@ -61,7 +61,7 @@ export function ClassCard({ item }: ClassCardProps) {
                     </div>
                 </div>
 
-                {/* Schedule Chips or Individual Message */}
+                {/* Schedule Chips or Individual Messages */}
                 {item.classType === "INDIVIDUAL" ? (
                     <div className="mb-4 flex items-start gap-2 text-xs text-purple-700 bg-purple-50 p-2 rounded-lg">
                         <Calendar className="h-4 w-4 shrink-0 mt-0.5" />
