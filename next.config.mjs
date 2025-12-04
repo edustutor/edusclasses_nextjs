@@ -6,6 +6,10 @@ const nextConfig = {
                 protocol: "https",
                 hostname: "edus.lk",
             },
+            {
+                protocol: "https",
+                hostname: "pub-25daa8127a824bc58c903315ba000dc1.r2.dev",
+            },
         ],
     },
 };

@@ -5,8 +5,9 @@ const DATA_URL = "https://raw.githubusercontent.com/edustutor/edusclasscodes/ref
 export async function fetchClasses(): Promise<ClassItem[]> {
     try {
         const res = await fetch(DATA_URL, {
-            next: { revalidate: 3600 }, // Cache for 1 hour
+            next: { revalidate: 300 }, // Cache for 5 minutes
         });
+
 
         if (!res.ok) {
             throw new Error("Failed to fetch class data");
