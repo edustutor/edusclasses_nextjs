@@ -90,6 +90,9 @@ export function ClassCard({ item }: ClassCardProps) {
                         <Wallet className="h-4 w-4 text-gray-400" />
                         <span>
                             {item.fee.currency} {item.fee.amount.toLocaleString()}
+                            <span className="text-xs font-normal text-gray-500 ml-1">
+                                {item.classType === "INDIVIDUAL" ? "/Hr" : "/Month"}
+                            </span>
                         </span>
                     </div>
                     <a
